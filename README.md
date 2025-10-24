@@ -19,22 +19,13 @@ sudo apt install -y nodejs npm
 mkdir dompurify-scanner && cd dompurify-scanner
 sudo npm init -y
 sudo npm install puppeteer isomorphic-dompurify jsdom
+npx puppeteer browsers install chrome
+sudo npm install minimist
 ```
 
 Puppeteer will download Chromium; if you prefer the system Chrome, see Puppeteer docs — but the above works out-of-the-box on Kali.
 
 ---
-
-
-
-**Note:** The script uses `minimist` for argument parsing — if not installed, install with:
-
-```bash
-sudo npm install minimist
-```
-
-(Or you can edit the script to not depend on it; using `minimist` is convenient.)
-
 ---
 
 # 3) Create `payloads.txt`
